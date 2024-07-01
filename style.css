@@ -1,0 +1,128 @@
+/* damos estilo al cuerpo general */
+body {
+    font-family: sans-serif;
+    /* background-color:#38b000; */
+    background-color: #e76f51;
+}
+h1{
+    text-align: center;
+    color: #d9dcd6;
+}
+/* 
+@media (min-width: 768px) {
+    h1 {
+        font-size: 5rem;
+    }
+} */
+
+.imagenes-container {
+    /*Quitamos margenes  margin: 100px auto; */
+    /*Modificamos por ultimo ok ok
+     width: 500px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+
+}
+
+.imagenes-container .imagen {
+    position: relative;
+    margin-right: -20px;
+    display: inline-flex;
+
+    flex-direction: column;
+    /*flex-direction: row;  */
+}
+
+.imagenes-container .imagen img {
+    width: 150px;
+    height: 150px;
+    transition:transform 0.32s ease-in-out ;
+    -webkit-transition:transform 0.32s ease-in-out ;
+    -moz-transition:transform 0.32s ease-in-out ;
+    -ms-transition:transform 0.32s ease-in-out ;
+    -o-transition:transform 0.32s ease-in-out ;
+}
+
+.imagenes-container .imagen .nombre {
+    position: absolute;
+    background-color: #e9c46a;
+    /* background-color: #2a9d8f; */
+    color: #264653;
+    border-radius: 5px;
+    display: none;
+    min-width: 100px;
+    width: 150px;
+    top: -55px;
+     left: calc(-50% - 30px); 
+    padding: 10px 15px;
+
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+}
+
+.imagenes-container .imagen .nombre .text {
+    display: inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    width: 150px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.imagenes-container .imagen:hover .nombre {
+    display: inline-block;
+    transform:translateY(-20px);
+    -webkit-transform:translateY(-20px);
+    -moz-transform:translateY(-20px);
+    -ms-transform:translateY(-20px);
+    -o-transform:translateY(-20px);
+}
+
+.imagenes-container .imagen .nombre::before {
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    left: 40%;
+    bottom: -20px;
+    /* background-color: #003566; */
+    border-top: 15px solid #ccff33;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom: 10px solid transparent;
+
+}
+
+.imagenes-container .imagen:hover  img{
+    transform: translateY(-20px);
+    width: 50px;
+    height: 50px;
+    -webkit-transform: translateY(-20px);
+    -moz-transform: translateY(-20px);
+    -ms-transform: translateY(-20px);
+    -o-transform: translateY(-20px);
+}
+@media (max-width:680px ){
+    .imagenes-container {
+      flex-direction: column;
+        height: 180vh;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
